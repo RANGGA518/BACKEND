@@ -1,0 +1,21 @@
+[
+  {
+    "id": 1,
+    "nama": "Teh Botol",
+    "stok": 30,
+    "harga": 5000
+  },
+  {
+    "id": 2,
+    "nama": "Kopi Susu",
+    "stok": 25,
+    "harga": 12000
+  },
+  {
+    "id": 3,
+    "nama": "Jus Mangga",
+    "stok": 15,
+    "harga": 15000
+  }
+]
+
