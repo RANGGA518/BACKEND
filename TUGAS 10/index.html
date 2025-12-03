@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>INDEX</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body class="p-4">
+
+<div class="container">
+    <h2 class="mb-4 text-center">Daftar Barang Minimarket</h2>
+
+    <a href="/add" class="btn btn-primary mb-3">Tambah Barang</a>
+
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>Kode</th>
+            <th>Nama</th>
+            <th>Harga</th>
+            <th>Stok</th>
+            <th>Gambar</th>
+            <th>Aksi</th>
+        </tr>
+
+        {% for item in data %}
+        <tr>
+            <td>{{ item.kode }}</td>
+            <td>{{ item.nama }}</td>
+            <td>{{ item.harga }}</td>
+            <td>{{ item.stok }}</td>
+            <td>
+                {% if item.gambar %}
+                    <img src="/static/uploads/{{ item.gambar }}" width="80">
+                {% else %}
+                    (Tidak Ada)
+                {% endif %}
+            </td>
+            <td>
+                <a href="/edit/{{ item._id }}" class="btn btn-warning btn-sm">Edit</a>
+                <a href="/delete/{{ item._id }}" class="btn btn-danger btn-sm" onclick="return confirm('Hapus data ini?')">Hapus</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+</body>
+</html>

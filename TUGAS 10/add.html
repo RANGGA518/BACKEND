@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TAMBAH BARANG</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body class="p-4">
+
+<div class="container">
+    <h2>Tambah Barang</h2>
+
+    <form method="POST" enctype="multipart/form-data">
+        
+        <div class="mb-3">
+            <label>Kode Barang</label>
+            <input type="text" name="kode" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label>Nama Barang</label>
+            <input type="text" name="nama" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label>Harga Barang</label>
+            <input type="number" name="harga" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label>Stok Barang</label>
+            <input type="number" name="stok" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label>Upload Gambar</label>
+            <input type="file" name="gambar" class="form-control">
+        </div>
+
+        <button type="submit" class="btn btn-success">Tambah</button>
+        <a href="{{ url_for('index') }}" class="btn btn-secondary">Kembali</a>
+
+    </form>
+</div>
+
+</body>
+</html>
